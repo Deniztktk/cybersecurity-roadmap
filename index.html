@@ -37,7 +37,6 @@ body::before{
   z-index:-1;
 }
 
-/* ── TOP LABEL ── */
 .shelf-label{
   font-family:'Playfair Display',serif;
   color:rgba(176,138,32,.55);
@@ -47,13 +46,11 @@ body::before{
   margin-bottom:20px;
 }
 
-/* ── BOOK CONTAINER ── */
 .book-wrap{
   position:relative;
   width:min(900px,97vw);
 }
 
-/* ARROW BTNS */
 .arr{
   position:absolute;top:50%;
   transform:translateY(-50%);
@@ -71,7 +68,6 @@ body::before{
 .arr-l{left:-52px}
 .arr-r{right:-52px}
 
-/* PIPS */
 .pips{display:flex;gap:5px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
 .pip{
   width:7px;height:7px;border-radius:50%;
@@ -80,7 +76,6 @@ body::before{
 }
 .pip.on{background:var(--gold2);transform:scale(1.3)}
 
-/* ── BOOK STAGE ── */
 .book{
   position:relative;
   width:100%;
@@ -88,8 +83,7 @@ body::before{
   perspective:2200px;
   transform-style:preserve-3d;
 }
-
-/* Spine shadow strip */
+  
 .spine-glow{
   position:absolute;top:0;left:50%;
   width:26px;height:100%;
@@ -103,7 +97,6 @@ body::before{
   pointer-events:none;z-index:60;
 }
 
-/* Right panel (static) */
 .right-panel{
   position:absolute;
   top:0;left:50%;width:50%;height:100%;
@@ -118,7 +111,6 @@ body::before{
   background:linear-gradient(to right,rgba(0,0,0,.09),transparent);
   pointer-events:none}
 
-/* Page elements */
 .pg{
   position:absolute;
   top:0;left:0;width:50%;height:100%;
@@ -138,7 +130,6 @@ body::before{
 }
 .pg-back{transform:rotateY(180deg)}
 
-/* Paper surface */
 .paper{
   width:100%;height:100%;
   background:var(--paper);
@@ -147,14 +138,13 @@ body::before{
 .paper::before{content:'';position:absolute;inset:0;
   background:repeating-linear-gradient(0deg,transparent,transparent 25px,var(--ruled) 25px,var(--ruled) 26px);
   pointer-events:none}
-/* right-edge shadow on left pages */
+
 .paper.left-page::after{
   content:'';position:absolute;top:0;right:0;
   width:22px;height:100%;
   background:linear-gradient(to left,rgba(0,0,0,.12),transparent);
   pointer-events:none}
 
-/* ── COVER ── */
 .cover{
   width:100%;height:100%;
   background:linear-gradient(160deg,#3a1a06 0%,#1e0d03 100%);
@@ -172,7 +162,6 @@ body::before{
   border:.3px solid rgba(176,138,32,.18);
   pointer-events:none;
 }
-/* corner ornaments */
 .co{position:absolute;width:28px;height:28px;border-color:rgba(176,138,32,.4);border-style:solid}
 .co-tl{top:22px;left:22px;border-width:1.5px 0 0 1.5px}
 .co-tr{top:22px;right:22px;border-width:1.5px 1.5px 0 0}
@@ -190,7 +179,6 @@ body::before{
 .cover-sub{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(176,138,32,.45);position:relative;z-index:1}
 .cover-foot{position:absolute;bottom:24px;font-size:.6rem;letter-spacing:.15em;color:rgba(176,138,32,.3)}
 
-/* ── PAGE CONTENT ── */
 .pc{
   padding:clamp(14px,2.8%,26px) clamp(16px,3.2%,28px);
   height:100%;
@@ -214,7 +202,6 @@ body::before{
 .ch-sub{font-size:.7rem;color:var(--muted);font-style:italic;margin-top:-4px}
 .sec{font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-top:6px}
 
-/* ── TABLE ── */
 .tbl{width:100%;border-collapse:collapse;font-size:.72rem}
 .tbl th{
   font-family:'Playfair Display',serif;
@@ -242,13 +229,11 @@ body::before{
 .tbl .col-topics{width:50%}
 .tbl .col-tools{width:35%}
 
-/* badge colors */
 .b-gir{background:#e8ddc4;color:#3d1f0a}
 .b-tem{background:#c9ba9b;color:#2c1508}
 .b-ort{background:#8a1c1c;color:#f5eedb}
 .b-ilr{background:#1e0d03;color:#d4aa44}
 
-/* resource table */
 .rtbl{width:100%;border-collapse:collapse;font-size:.7rem}
 .rtbl td{padding:3px 5px;border-bottom:.3px solid rgba(160,130,80,.1);color:var(--ink2);vertical-align:top;line-height:1.4}
 .rtbl tr:last-child td{border-bottom:none}
@@ -261,13 +246,11 @@ body::before{
   background:var(--paper3);color:var(--muted);
 }
 
-/* project chips */
 .proj-grid{display:flex;flex-direction:column;gap:4px}
 .proj-row{display:flex;gap:6px;align-items:flex-start}
 .proj-lv{font-size:.58rem;font-weight:600;padding:2px 5px;border-radius:2px;flex-shrink:0;margin-top:1px}
 .proj-t{font-size:.7rem;color:var(--ink2);line-height:1.4}
-
-/* TOC */
+  
 .toc-rows{display:flex;flex-direction:column;gap:5px}
 .toc-row{display:flex;align-items:baseline;gap:4px;cursor:pointer;transition:color .15s}
 .toc-row:hover .toc-name{color:var(--red)}
@@ -277,19 +260,15 @@ body::before{
 .toc-pg{font-size:.62rem;color:var(--muted)}
 .toc-tag{font-size:.55rem;padding:1px 5px;border-radius:2px;margin-left:5px;vertical-align:middle}
 
-/* page number */
 .pgn{margin-top:auto;padding-top:5px;border-top:.4px solid var(--paper3);font-size:.6rem;color:var(--muted);text-align:center;letter-spacing:.1em}
 
-/* social items */
 .soc-row{display:flex;align-items:baseline;gap:6px;padding:3px 0;border-bottom:.3px solid rgba(160,130,80,.1)}
 .soc-row:last-child{border-bottom:none}
 .soc-h{font-size:.7rem;font-weight:600;color:var(--ink);min-width:90px}
 .soc-d{font-size:.65rem;color:var(--muted);line-height:1.4}
 
-/* ── HINT ── */
 .hint{margin-top:14px;font-size:.68rem;color:rgba(176,138,32,.35);letter-spacing:.1em;text-align:center}
 
-/* chapter color accents on title */
 .accent-line{display:block;width:32px;height:2px;margin-top:5px}
 </style>
 </head>
@@ -305,15 +284,12 @@ body::before{
   <div class="book" id="book">
     <div class="right-panel" id="rp"><div id="rpc"></div></div>
     <div class="spine-glow"></div>
-    <!-- pages injected by JS -->
   </div>
 </div>
 <div class="hint">← → ok tuşları veya oklarla sayfa çevirin</div>
 
 <script>
-/* ════════════════════════════════════════════
-   DATA
-════════════════════════════════════════════ */
+
 const MODULES = [
   {
     id:'redteam', title:'Red Team', color:'#8a1c1c',
@@ -540,11 +516,7 @@ const MODULES = [
   },
 ];
 
-/* ════════════════════════════════════════════
-   SPREAD DEFINITIONS
-   Each spread = {left: fn|string, right: fn|string}
-   Pages: cover(0), toc(1), then 2 pages per module
-════════════════════════════════════════════ */
+
 function makeSpreads(){
   const s = [{left:'cover', right:'toc'}];
   MODULES.forEach((m,i)=>{
@@ -557,9 +529,6 @@ const TOTAL = SPREADS.length;
 
 let cur = 0;
 
-/* ════════════════════════════════════════════
-   RENDER HELPERS
-════════════════════════════════════════════ */
 function badge(lv){
   const map={Giriş:'b-gir',Temel:'b-tem',Orta:'b-ort',İleri:'b-ilr'};
   return `<span class="lv ${map[lv]||'b-gir'}">${lv}</span>`;
@@ -662,13 +631,9 @@ function renderCover(){
   </div>`;
 }
 
-/* ════════════════════════════════════════════
-   DOM BUILD
-════════════════════════════════════════════ */
 const book = document.getElementById('book');
 const rpc  = document.getElementById('rpc');
 
-// Create page elements (one per spread transition)
 const pageEls = [];
 for(let i=0;i<TOTAL-1;i++){
   const p = document.createElement('div');
@@ -699,9 +664,6 @@ function getRightHTML(spreadIdx){
   return '';
 }
 
-// Populate all pages
-// page[i].front = spread[i] left
-// page[i].back  = spread[i+1] left
 pageEls.forEach((p,i)=>{
   p.querySelector('.pg-front .paper').innerHTML = getLeftHTML(i);
   p.querySelector('.pg-back  .paper').innerHTML = getLeftHTML(i+1);
@@ -711,9 +673,6 @@ function updateRight(){
   rpc.innerHTML = getRightHTML(cur);
 }
 
-/* ════════════════════════════════════════════
-   NAVIGATION
-════════════════════════════════════════════ */
 function buildPips(){
   const el = document.getElementById('pips');
   el.innerHTML='';
@@ -752,14 +711,12 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft'||e.key==='ArrowUp') prev();
 });
 
-// Click on right half to advance, left half to go back
 document.getElementById('book').addEventListener('click', e=>{
   const bk = document.getElementById('book').getBoundingClientRect();
   const mid = bk.left + bk.width/2;
   if(e.clientX > mid) next(); else prev();
 });
 
-// Init
 applyState();
 </script>
 </body>
